@@ -1,12 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="uk">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Моя кав'ярня</title>
 
+    <!-- Підключення CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,11 +17,28 @@
 
     <!-- Верхня частина -->
     <header>
-        <img src="images/logo.jpg" alt="Логотип кав'ярні">
+
+        <!-- Навбар -->
+        <nav>
+
+            <img id="logo" src="images/logo.jpg" alt="Логотип кав'ярні">
+
+            <div class="nav-links">
+
+                <a href="#kava">Кава</a>
+                <a href="#deserty">Десерти</a>
+
+            </div>
+
+        </nav>
+
 
         <h1>Моя кав'ярня</h1>
 
+
+        <!-- Кава -->
         <h4>Кава ☕</h4>
+
         <div id="kava">
 
             <p>Еспресо</p>
@@ -31,41 +51,157 @@
 
         </div>
 
+
+        <!-- Десерти -->
+        <h4>Десерти 🍰</h4>
+
         <div id="deserty">
 
-    <h4>Десерти 🍰</h4>
+            <!-- На ці блоки можна натискати -->
+            <div class="menu-item" id="cake">
+                <p>Чізкейк</p>
+            </div>
 
-    <p>Чізкейк</p>
-    <p>Тірамісу</p>
-    <p>Круасан</p>
+            <div class="menu-item" id="tiramisu">
+                <p>Тірамісу</p>
+            </div>
 
-</div>
+            <div class="menu-item" id="croissant">
+                <p>Круасан</p>
+            </div>
+
+        </div>
 
     </header>
 
 
-    <!-- Основне меню -->
+    <!-- Основні кнопки -->
     <main>
 
-        <a href="#kava">
-            ☕ Меню
-        </a>
+        <a href="#kava">☕ Меню</a>
 
-        <a href="#deserty">
-            🍰 Десерти
-        </a>
+        <a href="#deserty">🍰 Десерти</a>
 
         <a href="https://me-l.co/i4z2bxbr">
             📍 Як нас знайти
         </a>
-
-
 
         <a href="https://www.instagram.com/kavyarnya_shokolad/">
             📸 Instagram
         </a>
 
     </main>
+
+
+    <!-- ================================= -->
+    <!-- ВІКНО ЧІЗКЕЙКА -->
+    <!-- ================================= -->
+
+    <div class="window" id="cake-window">
+
+        <h2>Чізкейк</h2>
+
+        <p>Ціна: 120 грн</p>
+
+        <p>Добавки:</p>
+
+        <label>
+            плюнути +20 грн
+        </label>
+
+        <br>
+
+        <label>
+            полить водою +15 грн
+        </label>
+
+        <br>
+
+        <label>
+            попісяти +15 грн
+        </label>
+
+        <br><br>
+
+        <button id="cake-close">
+            Закрити
+        </button>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- ВІКНО ТІРАМІСУ -->
+    <!-- ================================= -->
+
+    <div class="window" id="tiramisu-window">
+
+        <h2>Тірамісу</h2>
+
+        <p>Ціна: 130 грн</p>
+
+        <p>Добавки:</p>
+
+        <label>
+            плюнути +15 грн
+        </label>
+
+        <br>
+
+        <label>
+            полить водою +20 грн
+        </label>
+
+        <br>
+
+        <label>
+            попісяти +15 грн
+        </label>
+
+        <br><br>
+
+        <button id="tiramisu-close">
+            Закрити
+        </button>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- ВІКНО КРУАСАНА -->
+    <!-- ================================= -->
+
+    <div class="window" id="croissant-window">
+
+        <h2>Круасан</h2>
+
+        <p>Ціна: 90 грн</p>
+
+        <p>Добавки:</p>
+
+        <label>
+            плюнути +15 грн
+        </label>
+
+        <br>
+
+        <label>
+            полить водою +20 грн
+        </label>
+
+        <br>
+
+        <label>
+            попісяти +20 грн
+        </label>
+
+        <br><br>
+
+        <button id="croissant-close">
+            Закрити
+        </button>
+
+    </div>
 
 
     <!-- Нижня частина -->
@@ -76,8 +212,60 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <!-- Спочатку підключаємо jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+
+    <!-- Потім твій JavaScript -->
+    <script>
+
+        // Чізкейк
+        $("#cake").click(function() {
+
+            $("#cake-window").fadeIn(300);
+
+        });
+
+
+        $("#cake-close").click(function() {
+
+            $("#cake-window").fadeOut(300);
+
+        });
+
+
+        // Тірамісу
+        $("#tiramisu").click(function() {
+
+            $("#tiramisu-window").fadeIn(300);
+
+        });
+
+
+        $("#tiramisu-close").click(function() {
+
+            $("#tiramisu-window").fadeOut(300);
+
+        });
+
+
+        // Круасан
+        $("#croissant").click(function() {
+
+            $("#croissant-window").fadeIn(300);
+
+        });
+
+
+        $("#croissant-close").click(function() {
+
+            $("#croissant-window").fadeOut(300);
+
+        });
+
+    </script>
 
 </body>
 
 </html>
+```
