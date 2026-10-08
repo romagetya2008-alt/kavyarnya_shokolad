@@ -36,10 +36,6 @@
 
         <div class="nav-links">
 
-            <a href="#kava">☕ Кава</a>
-
-            <a href="#deserty">🍰 Десерти</a>
-
             <a href="#contacts">📍 Контакти</a>
 
         </div>
@@ -73,10 +69,8 @@
 
 
             <p class="hero-description">
-
                 Кава, десерти
                 та гарний настрій.
-
             </p>
 
 
@@ -123,7 +117,7 @@
 
 
             <a
-                href="#kava"
+                href="#menu"
                 class="hero-button"
             >
                 Переглянути меню ↓
@@ -143,23 +137,23 @@
 
 
         <!-- =========================
-             КАВА
+             ГОЛОВНЕ МЕНЮ
         ========================== -->
 
         <section
-            id="kava"
-            class="menu-section"
+            id="menu"
+            class="category-menu"
         >
 
             <div class="section-heading">
 
                 <span class="section-label">
-                    НАША КАВА
+                    НАШЕ МЕНЮ
                 </span>
 
 
                 <h2>
-                    ☕ Кава
+                    Обери категорію
                 </h2>
 
 
@@ -167,352 +161,183 @@
 
 
                 <p>
-                    Ароматна кава, приготована з любов'ю
+                    Обери те, що хочеться сьогодні
                 </p>
 
             </div>
 
 
-            <div class="menu-grid menu-shadow">
+            <div class="categories-grid">
 
 
-                <!-- ЕСПРЕСО -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('espresso')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('coffee')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">☕</span>
 
-                        <img
-                            src="images/espreso.jpeg"
-                            alt="Еспресо"
-                        >
+                    <span class="category-name">
+                        Кава
+                    </span>
 
-                        <span class="popular">
-                            Класика
-                        </span>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-                    </div>
-
-
-                    <div class="card-info">
-
-                        <h3>
-                            Еспресо
-                        </h3>
-
-
-                        <p>
-                            Насичений ароматний еспресо
-                            з виразним смаком.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                40 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- КАПУЧИНО -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('cappuccino')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('noncoffee')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🥛</span>
 
-                        <img
-                            src="images/capuchino.jpeg"
-                            alt="Капучино"
-                        >
+                    <span class="category-name">
+                        Не кава
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Капучино 250/400/500
-                        </h3>
-
-
-                        <p>
-                            Еспресо з ніжною
-                            молочною пінкою.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                62/68/84 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- ФЛЕТ ВАЙТ -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('flatwhite')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('cold')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🥶</span>
 
-                        <img
-                            src="images/flat.jpg"
-                            alt="Флет Вайт"
-                        >
+                    <span class="category-name">
+                        Холодні напої
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Флет Вайт
-                        </h3>
-
-
-                        <p>
-                            Подвійний еспресо
-                            з ніжним молоком.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                78 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- ЛАТТЕ -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('latte')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('seasonal')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🍵</span>
 
-                        <img
-                            src="images/latte.jpeg"
-                            alt="Латте"
-                        >
+                    <span class="category-name">
+                        Сезонні гарячі напої
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Латте 250/400/500
-                        </h3>
-
-
-                        <p>
-                            Ніжна кава з великою
-                            кількістю молока.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                62/68/74 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- АМЕРИКАНО -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('americano')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('bubble')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🧋</span>
 
-                        <img
-                            src="images/amerecano.jpeg"
-                            alt="Американо"
-                        >
+                    <span class="category-name">
+                        Bubble напої
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Американо
-                        </h3>
-
-
-                        <p>
-                            Класична чорна кава
-                            з насиченим ароматом.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                42 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- РАФ -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('raf')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('coldcoffee')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🧊</span>
 
-                        <img
-                            src="images/raf.png"
-                            alt="Раф"
-                        >
+                    <span class="category-name">
+                        Холодні кавові напої
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Раф
-                        </h3>
-
-
-                        <p>
-                            Ніжний вершковий
-                            кавовий напій.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                82 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </button>
 
 
 
-                <!-- ДОПІО -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('dopio')"
+                <button
+                    class="category-card"
+                    onclick="openCategory('desserts')"
                 >
 
-                    <div class="card-image">
+                    <span class="category-icon">🍰</span>
 
-                        <img
-                            src="images/dopio.jpg"
-                            alt="Допіо"
-                        >
+                    <span class="category-name">
+                        Десерти
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-
-                    <div class="card-info">
-
-                        <h3>
-                            Допіо
-                        </h3>
+                </button>
 
 
-                        <p>
-                            Подвійна порція
-                            насиченого еспресо.
-                        </p>
+
+                <button
+                    class="category-card"
+                    onclick="openCategory('salty')"
+                >
+
+                    <span class="category-icon">🥐</span>
+
+                    <span class="category-name">
+                        Солоне
+                    </span>
+
+                    <span class="category-arrow">
+                        →
+                    </span>
+
+                </button>
 
 
-                        <div class="card-footer">
 
-                            <strong>
-                                48 грн
-                            </strong>
+                <button
+                    class="category-card"
+                    onclick="openCategory('snacks')"
+                >
 
-                            <span class="more">
-                                Детальніше →
-                            </span>
+                    <span class="category-icon">🍫</span>
 
-                        </div>
+                    <span class="category-name">
+                        Снеки і батончики
+                    </span>
 
-                    </div>
+                    <span class="category-arrow">
+                        →
+                    </span>
 
-                </div>
+                </button>
 
 
             </div>
@@ -522,181 +347,51 @@
 
 
         <!-- =========================
-             ДЕСЕРТИ
+             СТОРІНКА КАТЕГОРІЇ
         ========================== -->
 
         <section
-            id="deserty"
-            class="menu-section"
+            id="category-page"
+            class="category-page"
         >
 
-            <div class="section-heading">
+            <button
+                class="back-button"
+                onclick="closeCategory()"
+            >
+                ← Назад до меню
+            </button>
 
-                <span class="section-label">
-                    СОЛОДКІ МОМЕНТИ
+
+            <div class="category-page-heading">
+
+                <span
+                    id="category-page-icon"
+                    class="category-page-icon"
+                >
+                    ☕
                 </span>
 
 
-                <h2>
-                    🍰 Десерти
+                <h2 id="category-page-title">
+                    Кава
                 </h2>
 
 
                 <div class="heading-line"></div>
 
 
-                <p>
-                    Щось смачне до твоєї улюбленої кави
+                <p id="category-page-description">
+                    Наші напої
                 </p>
 
             </div>
 
 
-            <div class="menu-grid">
-
-
-                <!-- ЧІЗКЕЙК -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('cheesecake')"
-                >
-
-                    <div class="card-image">
-
-                        <img
-                            src="images/chescake.jpeg"
-                            alt="Чізкейк"
-                        >
-
-                    </div>
-
-
-                    <div class="card-info">
-
-                        <h3>
-                            Чізкейк
-                        </h3>
-
-
-                        <p>
-                            Ніжний вершковий десерт
-                            з легкою текстурою.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                165 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ТІРАМІСУ -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('tiramisu')"
-                >
-
-                    <div class="card-image">
-
-                        <img
-                            src="images/tiramisu.jpeg"
-                            alt="Тірамісу"
-                        >
-
-                    </div>
-
-
-                    <div class="card-info">
-
-                        <h3>
-                            Тірамісу
-                        </h3>
-
-
-                        <p>
-                            Класичний італійський
-                            десерт з маскарпоне.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                130 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- КРУАСАН -->
-
-                <div
-                    class="menu-card"
-                    onclick="openProduct('croissant')"
-                >
-
-                    <div class="card-image">
-
-                        <img
-                            src="images/cruasan.jpg"
-                            alt="Круасан"
-                        >
-
-                    </div>
-
-
-                    <div class="card-info">
-
-                        <h3>
-                            Круасан
-                        </h3>
-
-
-                        <p>
-                            Хрусткий французький
-                            круасан.
-                        </p>
-
-
-                        <div class="card-footer">
-
-                            <strong>
-                                від 160 грн
-                            </strong>
-
-                            <span class="more">
-                                Детальніше →
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div
+                id="category-products"
+                class="menu-grid"
+            >
 
             </div>
 
@@ -736,7 +431,8 @@
             <div class="contact-buttons">
 
                 <a
-                    href="https://www.google.com/maps/place/Кав'ярня+%22Шоколад%22/@49.6532055,30.9772832,17z/data=!3m1!4b1!4m6!3m5!1s0x40d38f0074b78db7:0xdf3ae146261cddb0!8m2!3d49.6532055!4d30.9772832!16s%2Fg%2F11x02jmbd7?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.com/maps/place/Кав'ярня+%22Шоколад%22/@49.6532055,30.9772832,17z/data=!3m1!4b1!4m6!3m5!1s0x40d38f0074b78db7:0xdf3ae146261cddb0!8m2!3d49.6532055!4d30.9772832!16s%2Fg%2F11x02jmbd7"
+                    target="_blank"
                 >
                     📍 Як нас знайти
                 </a>
@@ -809,11 +505,7 @@
 
 
 
-    <!-- jQuery -->
-
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-
-    <!-- Наш JavaScript -->
 
     <script src="script.js"></script>
 
