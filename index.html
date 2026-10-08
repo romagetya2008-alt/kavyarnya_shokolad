@@ -3,217 +3,837 @@
 <html lang="uk">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Моя кав'ярня</title>
+    <title>Шоколад — кав'ярня</title>
 
-    <!-- Підключення CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Верхня частина -->
-    <header>
 
-        <!-- Навбар -->
-        <nav>
+    <!-- =========================
+         НАВІГАЦІЯ
+    ========================== -->
 
-            <img id="logo" src="images/logo.jpg" alt="Логотип кав'ярні">
+    <nav class="navbar">
 
-            <div class="nav-links">
+        <a href="#" class="logo-link">
 
-                <a href="#kava">Кава</a>
-                <a href="#deserty">Десерти</a>
+            <img
+                class="logo"
+                src="images/logo.jpg"
+                alt="Шоколад"
+            >
 
-            </div>
-
-        </nav>
-
-
-        <h1>Моя кав'ярня</h1>
+        </a>
 
 
-        <!-- Кава -->
-        <h4>Кава ☕</h4>
+        <div class="nav-links">
 
-        <div id="kava">
+            <a href="#kava">☕ Кава</a>
 
-            <p>Еспресо</p>
-            <p>Капучино 250</p>
-            <p>Латте 250</p>
-            <p>Капучино 400</p>
-            <p>Латте 400</p>
-            <p>Американо</p>
-            <p>Раф</p>
+            <a href="#deserty">🍰 Десерти</a>
+
+            <a href="#contacts">📍 Контакти</a>
 
         </div>
 
+    </nav>
 
-        <!-- Десерти -->
-        <h4>Десерти 🍰</h4>
 
-        <div id="deserty">
 
-            <!-- На ці блоки можна натискати -->
-            <div class="menu-item" id="cake">
-                <p>Чізкейк</p>
-            </div>
+    <!-- =========================
+         ГОЛОВНИЙ БЛОК
+    ========================== -->
 
-            <div class="menu-item" id="tiramisu">
-                <p>Тірамісу</p>
-            </div>
+    <header class="hero">
 
-            <div class="menu-item" id="croissant">
-                <p>Круасан</p>
-            </div>
+        <div class="hero-overlay">
+
+            <p class="hero-small">
+                КАВ'ЯРНЯ «ШОКОЛАД»
+            </p>
+
+
+            <h1>
+                Кава, десерти<br>
+                та гарний настрій
+            </h1>
+
+
+            <p class="hero-description">
+                Затишне місце для ароматної кави
+                та солодких моментів.
+            </p>
+
+
+            <a href="#kava" class="hero-button">
+                Переглянути меню ↓
+            </a>
 
         </div>
 
     </header>
 
 
-    <!-- Основні кнопки -->
+
+    <!-- =========================
+         ОСНОВНЕ МЕНЮ
+    ========================== -->
+
     <main>
 
-        <a href="#kava">☕ Меню</a>
 
-        <a href="#deserty">🍰 Десерти</a>
+        <!-- =========================
+             КАВА
+        ========================== -->
 
-        <a href="https://me-l.co/i4z2bxbr">
-            📍 Як нас знайти
-        </a>
+        <section id="kava">
 
-        <a href="https://www.instagram.com/kavyarnya_shokolad/">
-            📸 Instagram
-        </a>
+            <div class="section-heading">
+
+                <span>НАПІЙ</span>
+
+                <h2>☕ Кава</h2>
+
+                <p>
+                    Класичні напої для справжніх поціновувачів кави
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+
+                <!-- ЕСПРЕСО -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('espresso')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee1.jpeg"
+                            alt="Еспресо"
+                        >
+
+                        <span class="popular">
+                            Класика
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Еспресо</h3>
+
+                        <p>
+                            Насичений ароматний еспресо
+                            з виразним смаком.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                60 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- КАПУЧИНО -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('cappuccino')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee2.jpeg"
+                            alt="Капучино"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Капучино</h3>
+
+                        <p>
+                            Еспресо з ніжною молочною
+                            пінкою.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                80 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ФЛЕТ ВАЙТ -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('flatwhite')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee3.jpeg"
+                            alt="Флет Вайт"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Флет Вайт</h3>
+
+                        <p>
+                            Подвійний еспресо
+                            з ніжним молоком.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                85 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ЛАТТЕ -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('latte')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee1.jpeg"
+                            alt="Латте"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Латте</h3>
+
+                        <p>
+                            Ніжна кава з великою
+                            кількістю молока.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                85 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- АМЕРИКАНО -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('americano')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee2.jpeg"
+                            alt="Американо"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Американо</h3>
+
+                        <p>
+                            Класична чорна кава
+                            з насиченим ароматом.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                65 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- РАФ -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('raf')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee3.jpeg"
+                            alt="Раф"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Раф</h3>
+
+                        <p>
+                            Ніжний вершковий
+                            кавовий напій.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                95 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ДОПІО -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('dopio')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/coffee1.jpeg"
+                            alt="Допіо"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Допіо</h3>
+
+                        <p>
+                            Подвійна порція
+                            насиченого еспресо.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                75 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ДЕСЕРТИ
+        ========================== -->
+
+        <section id="deserty">
+
+            <div class="section-heading">
+
+                <span>СОЛОДЕНЬКЕ</span>
+
+                <h2>🍰 Десерти</h2>
+
+                <p>
+                    Ідеальне доповнення до твоєї кави
+                </p>
+
+            </div>
+
+
+            <div class="menu-grid">
+
+
+                <!-- ЧІЗКЕЙК -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('cheesecake')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/cake.jpeg"
+                            alt="Чізкейк"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Чізкейк</h3>
+
+                        <p>
+                            Ніжний вершковий десерт
+                            з легкою текстурою.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                120 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ТІРАМІСУ -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('tiramisu')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/tiramisu.jpeg"
+                            alt="Тірамісу"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Тірамісу</h3>
+
+                        <p>
+                            Класичний італійський
+                            десерт з маскарпоне.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                130 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- КРУАСАН -->
+
+                <div
+                    class="menu-card"
+                    onclick="openProduct('croissant')"
+                >
+
+                    <div class="card-image">
+
+                        <img
+                            src="images/croissant.jpeg"
+                            alt="Круасан"
+                        >
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <h3>Круасан</h3>
+
+                        <p>
+                            Хрусткий французький
+                            круасан.
+                        </p>
+
+
+                        <div class="card-footer">
+
+                            <strong>
+                                90 грн
+                            </strong>
+
+                            <span class="more">
+                                Детальніше →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             КОНТАКТИ
+        ========================== -->
+
+        <section id="contacts" class="contacts">
+
+            <div>
+
+                <span>
+                    ЧЕКАЄМО НА ТЕБЕ
+                </span>
+
+                <h2>
+                    Заходь на каву ☕
+                </h2>
+
+                <p>
+                    Гарна кава, смачні десерти
+                    та затишна атмосфера.
+                </p>
+
+            </div>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    href="https://me-l.co/i4z2bxbr"
+                    target="_blank"
+                >
+                    📍 Як нас знайти
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/kavyarnya_shokolad/"
+                    target="_blank"
+                >
+                    📸 Instagram
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-    <!-- ================================= -->
-    <!-- ВІКНО ЧІЗКЕЙКА -->
-    <!-- ================================= -->
 
-    <div class="window" id="cake-window">
+    <!-- =========================
+         МОДАЛЬНЕ ВІКНО
+    ========================== -->
 
-        <h2>Чізкейк</h2>
+    <div
+        class="modal"
+        id="product-modal"
+    >
 
-        <p>Ціна: 120 грн</p>
+        <div class="modal-box">
 
-        <p>Добавки:</p>
 
-        <label>
-            плюнути +20 грн
-        </label>
+            <button
+                class="close-button"
+                onclick="closeProduct()"
+            >
+                ×
+            </button>
 
-        <br>
 
-        <label>
-            полить водою +15 грн
-        </label>
+            <div class="modal-icon">
+                ☕
+            </div>
 
-        <br>
 
-        <label>
-            попісяти +15 грн
-        </label>
+            <h2 id="modal-title">
+                Назва
+            </h2>
 
-        <br><br>
 
-        <button id="cake-close">
-            Закрити
-        </button>
+            <p
+                id="modal-description"
+                class="modal-description"
+            >
+                Опис
+            </p>
+
+
+            <div class="modal-price">
+
+                <span>
+                    Ціна
+                </span>
+
+                <strong>
+                    <span id="modal-price">
+                        0
+                    </span>
+                    грн
+                </strong>
+
+            </div>
+
+
+            <!-- Добавки -->
+
+            <div class="extras">
+
+                <h3>
+                    Добавки
+                </h3>
+
+
+                <label class="extra-option">
+
+                    <span>
+                        Додатковий сироп
+                    </span>
+
+                    <strong>
+                        +15 грн
+                    </strong>
+
+                    <input
+                        type="checkbox"
+                        class="extra"
+                        value="15"
+                    >
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+                        Додаткове молоко
+                    </span>
+
+                    <strong>
+                        +20 грн
+                    </strong>
+
+                    <input
+                        type="checkbox"
+                        class="extra"
+                        value="20"
+                    >
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+                        Шоколад
+                    </span>
+
+                    <strong>
+                        +15 грн
+                    </strong>
+
+                    <input
+                        type="checkbox"
+                        class="extra"
+                        value="15"
+                    >
+
+                </label>
+
+
+                <label class="extra-option">
+
+                    <span>
+                        Вершки
+                    </span>
+
+                    <strong>
+                        +20 грн
+                    </strong>
+
+                    <input
+                        type="checkbox"
+                        class="extra"
+                        value="20"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <div class="total-price">
+
+                <span>
+                    Разом
+                </span>
+
+                <strong>
+                    <span id="total-price">
+                        0
+                    </span>
+                    грн
+                </strong>
+
+            </div>
+
+        </div>
 
     </div>
 
 
-    <!-- ================================= -->
-    <!-- ВІКНО ТІРАМІСУ -->
-    <!-- ================================= -->
 
-    <div class="window" id="tiramisu-window">
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-        <h2>Тірамісу</h2>
-
-        <p>Ціна: 130 грн</p>
-
-        <p>Добавки:</p>
-
-        <label>
-            плюнути +15 грн
-        </label>
-
-        <br>
-
-        <label>
-            полить водою +20 грн
-        </label>
-
-        <br>
-
-        <label>
-            попісяти +15 грн
-        </label>
-
-        <br><br>
-
-        <button id="tiramisu-close">
-            Закрити
-        </button>
-
-    </div>
-
-
-    <!-- ================================= -->
-    <!-- ВІКНО КРУАСАНА -->
-    <!-- ================================= -->
-
-    <div class="window" id="croissant-window">
-
-        <h2>Круасан</h2>
-
-        <p>Ціна: 90 грн</p>
-
-        <p>Добавки:</p>
-
-        <label>
-            плюнути +15 грн
-        </label>
-
-        <br>
-
-        <label>
-            полить водою +20 грн
-        </label>
-
-        <br>
-
-        <label>
-            попісяти +20 грн
-        </label>
-
-        <br><br>
-
-        <button id="croissant-close">
-            Закрити
-        </button>
-
-    </div>
-
-
-    <!-- Нижня частина -->
     <footer>
 
-        <p>© 2026 Моя кав'ярня</p>
+        <h3>
+            ШОКОЛАД
+        </h3>
+
+        <p>
+            Кава • Десерти • Гарний настрій
+        </p>
+
+        <small>
+            © 2026 Кав'ярня «Шоколад»
+        </small>
 
     </footer>
 
 
-  <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-<script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
