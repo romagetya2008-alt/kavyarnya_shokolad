@@ -312,7 +312,6 @@ var products = {
     `,
     "waffle-rochetto": `
     <h2>Вафля Рошетто</h2>
-
     <p class="price">30 ₴</p>
 `,
 
@@ -625,7 +624,7 @@ noncoffee: {
         {
             id: "cocoa",
             name: "Какао 250/400/500",
-            image: "images/cocoa.jpeg",
+            image: "images/cocoa.jpg",
             description:
                 "Ніжне какао на молоці з можливістю вибору молока та додатків.",
             price: "55/60/75 грн"
@@ -643,7 +642,7 @@ noncoffee: {
         {
             id: "hotchocolate",
             name: "Гарячий шоколад 250/400",
-            image: "images/hot-chocolate.jpeg",
+            image: "images/hot-chocolate.webp",
             description:
                 "Гарячий шоколад з ніжним молоком.",
             price: "50/55 грн"
@@ -677,7 +676,7 @@ noncoffee: {
             {
                 id: "mojito",
                 name: "Мохіто",
-                image: "images/mochito.jpeg",
+                image: "images/mojito.webp",
                 description:
                     "Холодний напій з лаймом та м'ятою.",
                 price: "80 грн"
@@ -686,7 +685,7 @@ noncoffee: {
             {
                 id: "sunrise",
                 name: "Санрайз",
-                image: "images/sanrayz.jpeg",
+                image: "images/sunrise.webp",
                 description:
                     "Холодний напій.",
                 price: "80 грн"
@@ -695,7 +694,7 @@ noncoffee: {
             {
                 id: "pinacolada",
                 name: "Піна Колада",
-                image: "images/kolada.jpeg",
+                image: "images/pinacolada.jpeg",
                 description:
                     "Холодний напій.",
                 price: "80 грн"
@@ -704,7 +703,7 @@ noncoffee: {
             {
                 id: "malibu",
                 name: "Малібу",
-                image: "images/malibu.jpeg",
+                image: "images/malibu.jpg",
                 description:
                     "Холодний напій.",
                 price: "80 грн"
@@ -735,14 +734,14 @@ bubble: {
         {
             id: "bubble-latte",
             name: "Бабл Лате",
-            image: "images/bubble-latte.jpeg",
+            image: "images/bubble.jpg",
             description: "Кава та молоко з бабл-додатками.",
             price: "98 ₴"
         },
         {
             id: "bubble-strawberry-coconut",
             name: "Бабл полуниця / кокос",
-            image: "images/bubble-strawberry-coconut.jpeg",
+            image: "images/bubble-strawberry-coconut.webp",
             description: "Полуничний та кокосовий смак з молоком.",
             price: "98 ₴"
         },
@@ -844,37 +843,37 @@ snacks: {
         {
             id: "millennium-chocolate",
             name: "Шоколадка Мілленіум",
-            image: "images/millennium-chocolate.jpeg",
+            image: "images/millennium-chocolate.webp",
             price: "40 ₴"
         },
         {
             id: "axa-muesli-bar",
             name: "Батончик-мюслі «АХА»",
-            image: "images/axa-muesli-bar.jpeg",
+            image: "images/axa-muesli-bar.webp",
             price: "28 ₴"
         },
         {
             id: "line-bar",
             name: "Батончик Лайн",
-            image: "images/line-bar.jpeg",
+            image: "images/line-bar.jpg",
             price: "35 ₴"
         },
         {
             id: "fitness-bar",
             name: "Батончик «Фітнес»",
-            image: "images/fitness-bar.jpeg",
+            image: "images/fitnes-bar.webp",
             price: "36 ₴"
         },
         {
             id: "food-mission-bar",
             name: "Натуральний батончик «Food Mission»",
-            image: "images/food-mission-bar.jpeg",
+            image: "images/food-mission-bar.webp",
             price: "65 ₴"
         },
         {
             id: "gingerbread",
             name: "Імбирне печиво",
-            image: "images/gingerbread.jpeg",
+            image: "images/gingerbread.jpg",
             price: "50/68 ₴"
         }
     ]
@@ -984,8 +983,8 @@ function openCategory(categoryName) {
                         </h3>
 
 
-                        <p>
-                            ${product.description}
+                       <p>
+                            ${product.description || ""}
                         </p>
 
 
