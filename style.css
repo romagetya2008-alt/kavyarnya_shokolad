@@ -1,4 +1,3 @@
-
 /* =====================================
    ОСНОВА
 ===================================== */
@@ -24,7 +23,23 @@ body {
     background: #f8f4ef;
 
     color: #33241d;
+
+    animation: pageFade 0.8s ease;
 }
+
+
+@keyframes pageFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
 
 
 /* =====================================
@@ -58,24 +73,31 @@ body {
         0 3px 20px rgba(0, 0, 0, 0.08);
 
     z-index: 1000;
+
+    transition: box-shadow 0.3s ease;
 }
 
 
+
 .logo {
+
     width: 55px;
+
     height: 55px;
 
     border-radius: 50%;
 
     object-fit: cover;
 
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 
 .logo:hover {
+
     transform: scale(1.08);
 }
+
 
 
 .nav-links {
@@ -84,6 +106,7 @@ body {
 
     gap: 30px;
 }
+
 
 
 .nav-links a {
@@ -98,13 +121,15 @@ body {
 
     font-weight: bold;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 
 .nav-links a:hover {
+
     color: #9b6848;
 }
+
 
 
 .nav-links a::after {
@@ -123,13 +148,15 @@ body {
 
     background: #9b6848;
 
-    transition: 0.3s;
+    transition: width 0.3s ease;
 }
 
 
 .nav-links a:hover::after {
+
     width: 100%;
 }
+
 
 
 /* =====================================
@@ -165,54 +192,204 @@ body {
 }
 
 
+
 .hero-overlay {
 
-    max-width: 800px;
+    max-width: 850px;
 
     padding: 30px;
 
     color: white;
+
+    animation: heroAppear 1s ease forwards;
 }
 
 
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* Верхній напис */
+
 .hero-small {
+
+    opacity: 0;
+
+    margin: 0;
 
     letter-spacing: 5px;
 
-    font-size: 13px;
+    font-size: 14px;
 
     font-weight: bold;
 
     color: #e7c4a9;
+
+    animation:
+        fadeUp 0.8s ease forwards;
+
+    animation-delay: 0.2s;
 }
 
 
+
+/* Головний заголовок */
+
 .hero h1 {
 
-    margin: 20px 0;
+    opacity: 0;
+
+    margin: 20px 0 10px;
 
     font-size:
         clamp(45px, 7vw, 78px);
 
     line-height: 1.05;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+
+    animation-delay: 0.4s;
 }
 
 
+
+/* Другий заголовок */
+
+.hero h2 {
+
+    opacity: 0;
+
+    margin: 10px 0 20px;
+
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(27px, 4vw, 42px);
+
+    font-weight: normal;
+
+    color: #fff8f2;
+
+    line-height: 1.2;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+
+    animation-delay: 0.6s;
+}
+
+
+
+/* Опис */
+
 .hero-description {
+
+    opacity: 0;
 
     max-width: 550px;
 
-    margin: 0 auto 35px;
+    margin: 0 auto 25px;
 
     font-size: 19px;
 
     line-height: 1.6;
 
     color: #f4eee9;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+
+    animation-delay: 0.8s;
 }
 
 
+
+/* =====================================
+   HERO ІНФОРМАЦІЯ
+===================================== */
+
+.hero-info {
+
+    opacity: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin: 25px 0 30px;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+
+    animation-delay: 1s;
+}
+
+
+.hero-info-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    text-align: left;
+}
+
+
+.hero-info-item > span {
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+.hero-info-item strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+.hero-info-item small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #f1e6de;
+}
+
+
+
+/* =====================================
+   HERO BUTTON
+===================================== */
+
 .hero-button {
+
+    opacity: 0;
 
     display: inline-block;
 
@@ -228,17 +405,56 @@ body {
 
     font-weight: bold;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    animation:
+        fadeUp 0.9s ease forwards;
+
+    animation-delay: 1.2s;
 }
 
 
 .hero-button:hover {
 
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+
+    background: #fff8f2;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
+        0 12px 30px rgba(0, 0, 0, 0.25);
 }
+
+
+
+/* =====================================
+   HERO АНІМАЦІЯ
+===================================== */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
 
 
 /* =====================================
@@ -258,9 +474,29 @@ main {
 section {
 
     scroll-margin-top: 100px;
-
-    margin-bottom: 120px;
 }
+
+
+
+/* =====================================
+   СЕКЦІЇ КАВИ І ДЕСЕРТІВ
+===================================== */
+
+.menu-section {
+
+    padding: 70px 35px;
+
+    margin-bottom: 100px;
+
+    background: white;
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 10px 40px
+        rgba(60, 40, 25, 0.06);
+}
+
 
 
 /* =====================================
@@ -271,42 +507,92 @@ section {
 
     text-align: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 
-.section-heading span {
+.section-label {
 
-    color: #a26c4b;
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #a4775a;
 
     font-size: 12px;
 
     font-weight: bold;
 
     letter-spacing: 4px;
+
+    text-transform: uppercase;
 }
 
 
 .section-heading h2 {
 
-    margin: 12px 0;
+    margin: 0;
 
-    font-size: 45px;
+    color: #38271e;
+
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.section-heading:hover h2 {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.heading-line {
+
+    width: 55px;
+
+    height: 3px;
+
+    margin: 18px auto;
+
+    background: #a4775a;
+
+    border-radius: 10px;
+
+    transition:
+        width 0.4s ease;
+}
+
+
+.section-heading:hover .heading-line {
+
+    width: 90px;
 }
 
 
 .section-heading p {
 
-    margin: 0;
+    margin: 0 auto;
 
-    color: #86756a;
+    max-width: 500px;
+
+    color: #897a70;
 
     font-size: 16px;
+
+    line-height: 1.6;
 }
 
 
+
 /* =====================================
-   КАРТКИ
+   СІТКА КАРТОК
 ===================================== */
 
 .menu-grid {
@@ -320,32 +606,76 @@ section {
 }
 
 
+.menu-shadow {
+
+    padding: 0;
+}
+
+
+
+/* =====================================
+   КАРТКА
+===================================== */
+
 .menu-card {
+
+    display: flex;
+
+    flex-direction: column;
 
     overflow: hidden;
 
     background: white;
+
+    border:
+        1px solid #eee5de;
 
     border-radius: 22px;
 
     cursor: pointer;
 
     box-shadow:
-        0 8px 30px rgba(70, 45, 30, 0.08);
+        0 8px 30px
+        rgba(70, 45, 30, 0.08);
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
 
     transition:
-        transform 0.3s,
-        box-shadow 0.3s;
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        box-shadow 0.4s ease;
 }
 
 
-.menu-card:hover {
 
-    transform: translateY(-8px);
+/* Коли картка з'явилася */
+
+.menu-card.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+
+/* Hover */
+
+.menu-card.show:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
 
     box-shadow:
-        0 18px 40px rgba(70, 45, 30, 0.16);
+        0 18px 40px
+        rgba(70, 45, 30, 0.16);
 }
+
 
 
 /* =====================================
@@ -365,19 +695,23 @@ section {
 .card-image img {
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
 
-    transition: transform 0.5s;
+    transition:
+        transform 0.5s ease;
 }
 
 
 .menu-card:hover
 .card-image img {
 
-    transform: scale(1.07);
+    transform:
+        scale(1.07);
 }
+
 
 
 /* =====================================
@@ -389,6 +723,7 @@ section {
     position: absolute;
 
     top: 15px;
+
     left: 15px;
 
     padding: 7px 13px;
@@ -402,7 +737,12 @@ section {
     font-size: 12px;
 
     font-weight: bold;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0,0,0,0.08);
 }
+
 
 
 /* =====================================
@@ -410,6 +750,12 @@ section {
 ===================================== */
 
 .card-info {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
 
     padding: 23px;
 }
@@ -437,6 +783,11 @@ section {
 }
 
 
+
+/* =====================================
+   НИЖНЯ ЧАСТИНА КАРТКИ
+===================================== */
+
 .card-footer {
 
     display: flex;
@@ -445,7 +796,7 @@ section {
 
     justify-content: space-between;
 
-    margin-top: 22px;
+    margin-top: auto;
 
     padding-top: 18px;
 
@@ -456,9 +807,9 @@ section {
 
 .card-footer strong {
 
-    font-size: 21px;
+    font-size: 22px;
 
-    color: #6d4934;
+    color: #8b5e3c;
 }
 
 
@@ -470,6 +821,7 @@ section {
 
     font-weight: bold;
 }
+
 
 
 /* =====================================
@@ -485,6 +837,8 @@ section {
     justify-content: space-between;
 
     gap: 30px;
+
+    margin-bottom: 100px;
 
     padding: 55px;
 
@@ -524,6 +878,11 @@ section {
 }
 
 
+
+/* =====================================
+   КНОПКИ КОНТАКТІВ
+===================================== */
+
 .contact-buttons {
 
     display: flex;
@@ -548,16 +907,21 @@ section {
 
     font-weight: bold;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
 
 .contact-buttons a:hover {
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
-    background: #f1e5dc;
+    background:
+        #f1e5dc;
 }
+
 
 
 /* =====================================
@@ -579,9 +943,10 @@ section {
     padding: 20px;
 
     background:
-        rgba(30, 20, 15, 0.65);
+        rgba(30, 20, 15, 0.68);
 
-    backdrop-filter: blur(5px);
+    backdrop-filter:
+        blur(5px);
 
     z-index: 3000;
 }
@@ -593,7 +958,7 @@ section {
 
     width: 100%;
 
-    max-width: 480px;
+    max-width: 500px;
 
     max-height: 90vh;
 
@@ -606,7 +971,8 @@ section {
     background: white;
 
     box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.3);
+        0 25px 70px
+        rgba(0, 0, 0, 0.3);
 
     animation:
         modalAnimation 0.25s ease;
@@ -638,14 +1004,21 @@ section {
 }
 
 
-.close-button {
+
+/* =====================================
+   КНОПКА ЗАКРИТТЯ
+===================================== */
+
+.close-btn {
 
     position: absolute;
 
     top: 15px;
+
     right: 15px;
 
     width: 38px;
+
     height: 38px;
 
     border: none;
@@ -656,175 +1029,109 @@ section {
 
     color: #503526;
 
-    font-size: 25px;
+    font-size: 22px;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-.close-button:hover {
+.close-btn:hover {
 
-    background: #e5d8ce;
+    background:
+        #e5d8ce;
 
-    transform: rotate(90deg);
+    transform:
+        rotate(90deg);
 }
 
 
-.modal-icon {
 
-    width: 60px;
-    height: 60px;
+/* =====================================
+   ВМІСТ ТОВАРУ
+===================================== */
 
-    display: flex;
+#product-content {
 
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 15px;
-
-    border-radius: 50%;
-
-    background: #f5ebe3;
-
-    font-size: 28px;
+    padding-top: 10px;
 }
 
 
-.modal-box h2 {
+#product-content h2 {
 
-    margin: 0 0 8px;
+    margin:
+        0 0 10px;
+
+    color:
+        #6f4e37;
+
+    font-family:
+        Georgia, serif;
 
     font-size: 30px;
 }
 
 
-.modal-description {
+#product-content .price {
+
+    margin:
+        0 0 20px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color:
+        #8b5e3c;
+}
+
+
+#product-content h3 {
+
+    margin:
+        25px 0 10px;
+
+    color:
+        #6f4e37;
+
+    font-size: 18px;
+}
+
+
+#product-content ul {
+
+    list-style: none;
+
+    padding: 0;
 
     margin: 0;
-
-    color: #85756b;
-
-    line-height: 1.6;
 }
 
 
-/* =====================================
-   ЦІНА
-===================================== */
+#product-content li {
 
-.modal-price {
+    padding:
+        10px 0;
 
-    display: flex;
+    border-bottom:
+        1px solid #eee5de;
 
-    justify-content: space-between;
+    color:
+        #5d4c43;
 
-    align-items: center;
-
-    margin: 25px 0;
-
-    padding: 17px;
-
-    border-radius: 13px;
-
-    background: #f7f1ec;
+    line-height: 1.4;
 }
 
 
-.modal-price strong {
+#product-content li:last-child {
 
-    color: #6d4934;
-
-    font-size: 21px;
+    border-bottom:
+        none;
 }
 
-
-/* =====================================
-   ДОБАВКИ
-===================================== */
-
-.extras h3 {
-
-    margin-bottom: 12px;
-
-    font-size: 19px;
-}
-
-
-.extra-option {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin: 8px 0;
-
-    padding: 14px;
-
-    border-radius: 12px;
-
-    background: #f8f4f0;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.extra-option:hover {
-
-    background: #eee3da;
-}
-
-
-.extra-option strong {
-
-    margin-left: auto;
-
-    color: #8b5d40;
-}
-
-
-.extra-option input {
-
-    width: 18px;
-    height: 18px;
-
-    accent-color: #6f4e37;
-}
-
-
-/* =====================================
-   ЗАГАЛЬНА ЦІНА
-===================================== */
-
-.total-price {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    margin-top: 25px;
-
-    padding-top: 20px;
-
-    border-top:
-        1px solid #e5ddd7;
-
-    font-size: 20px;
-}
-
-
-.total-price strong {
-
-    color: #6d4934;
-}
 
 
 /* =====================================
@@ -833,38 +1140,78 @@ section {
 
 footer {
 
-    padding: 55px 20px;
+    padding:
+        55px 20px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    background: #241711;
+    background:
+        #241711;
 
-    color: #bcaea5;
+    color:
+        #bcaea5;
 }
 
 
 footer h3 {
 
-    margin: 0 0 10px;
+    margin:
+        0 0 10px;
 
-    color: white;
+    color:
+        white;
 
-    font-size: 23px;
+    font-size:
+        23px;
 
-    letter-spacing: 4px;
+    letter-spacing:
+        4px;
 }
 
 
 footer p {
 
-    margin: 0 0 15px;
+    margin:
+        0 0 15px;
 }
 
 
 footer small {
 
-    color: #806f65;
+    color:
+        #806f65;
 }
+
+
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar {
+
+    width:
+        10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        #8b5e3c;
+
+    border-radius:
+        10px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:
+        #f2ebe5;
+}
+
 
 
 /* =====================================
@@ -877,26 +1224,27 @@ footer small {
 
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
 
     .contacts {
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        text-align: center;
-
+        text-align:
+            center;
     }
 
 
     .contact-buttons {
 
-        justify-content: center;
-
+        justify-content:
+            center;
     }
 
 }
+
 
 
 /* =====================================
@@ -907,56 +1255,106 @@ footer small {
 
     .navbar {
 
-        height: 65px;
+        height:
+            65px;
 
         padding:
             8px 15px;
-
     }
 
 
     .logo {
 
-        width: 45px;
-        height: 45px;
+        width:
+            45px;
 
+        height:
+            45px;
     }
 
 
     .nav-links {
 
-        gap: 12px;
-
+        gap:
+            12px;
     }
 
 
     .nav-links a {
 
-        font-size: 12px;
-
+        font-size:
+            12px;
     }
 
 
     .hero {
 
-        margin-top: 65px;
+        margin-top:
+            65px;
 
-        min-height: 560px;
+        min-height:
+            650px;
+    }
 
+
+    .hero-overlay {
+
+        padding:
+            20px;
+    }
+
+
+    .hero-small {
+
+        font-size:
+            11px;
+
+        letter-spacing:
+            3px;
     }
 
 
     .hero h1 {
 
-        font-size: 43px;
+        font-size:
+            43px;
+    }
 
+
+    .hero h2 {
+
+        font-size:
+            30px;
     }
 
 
     .hero-description {
 
-        font-size: 16px;
+        font-size:
+            16px;
+    }
 
+
+    .hero-info {
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        gap:
+            20px;
+
+        margin:
+            25px 0;
+    }
+
+
+    .hero-info-item {
+
+        width:
+            250px;
     }
 
 
@@ -964,302 +1362,141 @@ footer small {
 
         padding:
             65px 15px;
+    }
 
+
+    .menu-section {
+
+        padding:
+            50px 15px;
+
+        border-radius:
+            25px;
+
+        margin-bottom:
+            60px;
+    }
+
+
+    .section-heading {
+
+        margin-bottom:
+            40px;
     }
 
 
     .section-heading h2 {
 
-        font-size: 36px;
+        font-size:
+            38px;
+    }
 
+
+    .section-label {
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            3px;
+    }
+
+
+    .section-heading p {
+
+        font-size:
+            14px;
     }
 
 
     .menu-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
+        gap:
+            22px;
     }
 
 
     .card-image {
 
-        height: 250px;
-
+        height:
+            250px;
     }
 
 
     .contacts {
 
-        padding: 40px 20px;
+        padding:
+            40px 20px;
 
-        border-radius: 22px;
+        border-radius:
+            22px;
 
+        margin-bottom:
+            60px;
     }
 
 
     .contacts h2 {
 
-        font-size: 30px;
+        font-size:
+            30px;
+    }
 
+
+    .contact-buttons {
+
+        flex-direction:
+            column;
+
+        width:
+            100%;
+    }
+
+
+    .contact-buttons a {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+
+    .modal {
+
+        padding:
+            15px;
     }
 
 
     .modal-box {
 
-        padding: 28px 22px;
+        padding:
+            28px 22px;
 
+        max-height:
+            88vh;
+
+        border-radius:
+            22px;
     }
 
-}
-/* Модальне вікно */
 
-.modal {
+    #product-content h2 {
 
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0.7);
-
-    z-index: 9999;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 20px;
-}
-
-.modal-box {
-
-    background: white;
-
-    width: 100%;
-
-    max-width: 500px;
-
-    max-height: 85vh;
-
-    overflow-y: auto;
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    position: relative;
-}
-
-.close-btn {
-
-    position: absolute;
-
-    top: 15px;
-
-    right: 15px;
-
-    border: none;
-
-    background: none;
-
-    font-size: 28px;
-
-    cursor: pointer;
-}
-
-#product-content h2 {
-
-    margin-top: 0;
-
-    color: #6f4e37;
-}
-
-#product-content .price {
-
-    font-size: 28px;
-
-    font-weight: bold;
-
-    color: #6f4e37;
-}
-
-#product-content h3 {
-
-    margin-top: 25px;
-
-    color: #6f4e37;
-}
-
-#product-content ul {
-
-    padding-left: 20px;
-}
-
-#product-content li {
-
-    margin: 8px 0;
-}
-/* ===========================
-   ОДНАКОВА ВИСОТА КАРТОК
-=========================== */
-
-.menu-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-footer {
-    margin-top: auto;
-}
-
-
-/* ===========================
-   ПЛАВНА ПОЯВА САЙТУ
-=========================== */
-
-body {
-    animation: pageFade 0.8s ease;
-}
-
-@keyframes pageFade {
-
-    from {
-        opacity: 0;
+        font-size:
+            27px;
     }
 
-    to {
-        opacity: 1;
+
+    #product-content .price {
+
+        font-size:
+            25px;
     }
 
-}
-
-
-/* ===========================
-   КРАЩІ ЦІНИ
-=========================== */
-
-.card-footer strong {
-
-    font-size: 24px;
-
-    color: #8b5e3c;
-}
-
-
-/* ===========================
-   КРАЩЕ ВІКНО ТОВАРУ
-=========================== */
-
-#product-content ul {
-
-    list-style: none;
-
-    padding: 0;
-
-    margin: 0;
-}
-
-#product-content li {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 10px 0;
-
-    border-bottom: 1px solid #eee;
-}
-
-#product-content li:last-child {
-
-    border-bottom: none;
-}
-
-
-/* ===========================
-   КРАЩИЙ СКРОЛБАР
-=========================== */
-
-::-webkit-scrollbar {
-
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-
-    background: #8b5e3c;
-
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-
-    background: #f2ebe5;
-}
-
-/* ===========================
-   СТАТИСТИКА
-=========================== */
-
-.stats {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 80px;
-
-    padding: 50px 20px;
-
-    background: white;
-
-    text-align: center;
-}
-
-.stats h3 {
-
-    margin: 0;
-
-    font-size: 42px;
-
-    color: #8b5e3c;
-}
-
-.stats p {
-
-    margin-top: 10px;
-
-    color: #777;
-}
-
-@media (max-width: 700px){
-
-    .stats{
-
-        flex-direction: column;
-
-        gap: 30px;
-
-    }
-
-}
-.menu-shadow {
-
-    padding: 30px;
-
-    border-radius: 30px;
-
-    background: white;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,.06);
 }

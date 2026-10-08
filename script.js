@@ -1,4 +1,3 @@
-
 // =====================================
 // ТОВАРИ
 // =====================================
@@ -21,9 +20,9 @@ var products = {
         <h3>Додатки</h3>
 
         <ul>
-            <li>+ еспресо купаж +10 ₴</li>
-            <li>+ еспресо арабіка +15 ₴</li>
-            <li>+ сироп</li>
+            <li>Еспресо купаж +10 ₴</li>
+            <li>Еспресо арабіка +15 ₴</li>
+            <li>Сироп</li>
         </ul>
 
         <h3>Молоко 180 мл</h3>
@@ -38,11 +37,16 @@ var products = {
     `,
 
 
-
     cappuccino: `
-        <h2>Капучино 250</h2>
+        <h2>Капучино</h2>
 
-        <p class="price">62 ₴</p>
+        <h3>Розмір</h3>
+
+        <ul>
+            <li>250 мл — 62 ₴</li>
+            <li>400 мл — 68 ₴</li>
+            <li>500 мл — 84 ₴</li>
+        </ul>
 
         <h3>Кава</h3>
 
@@ -65,12 +69,11 @@ var products = {
         <h3>Додатки</h3>
 
         <ul>
-            <li>+ еспресо купаж +10 ₴</li>
-            <li>+ еспресо арабіка +15 ₴</li>
-            <li>+ сироп</li>
+            <li>Еспресо купаж +10 ₴</li>
+            <li>Еспресо арабіка +15 ₴</li>
+            <li>Сироп</li>
         </ul>
     `,
-
 
 
     flatwhite: `
@@ -99,18 +102,23 @@ var products = {
         <h3>Додатки</h3>
 
         <ul>
-            <li>+ еспресо купаж +10 ₴</li>
-            <li>+ еспресо арабіка +15 ₴</li>
-            <li>+ сироп</li>
+            <li>Еспресо купаж +10 ₴</li>
+            <li>Еспресо арабіка +15 ₴</li>
+            <li>Сироп</li>
         </ul>
     `,
 
 
-
     latte: `
-        <h2>Лате 250</h2>
+        <h2>Латте</h2>
 
-        <p class="price">62 ₴</p>
+        <h3>Розмір</h3>
+
+        <ul>
+            <li>250 мл — 62 ₴</li>
+            <li>400 мл — 68 ₴</li>
+            <li>500 мл — 74 ₴</li>
+        </ul>
 
         <h3>Кава</h3>
 
@@ -133,12 +141,11 @@ var products = {
         <h3>Додатки</h3>
 
         <ul>
-            <li>+ еспресо купаж +10 ₴</li>
-            <li>+ еспресо арабіка +15 ₴</li>
-            <li>+ сироп</li>
+            <li>Еспресо купаж +10 ₴</li>
+            <li>Еспресо арабіка +15 ₴</li>
+            <li>Сироп</li>
         </ul>
     `,
-
 
 
     americano: `
@@ -157,12 +164,11 @@ var products = {
         <h3>Додатки</h3>
 
         <ul>
-            <li>+ еспресо купаж +10 ₴</li>
-            <li>+ еспресо арабіка +15 ₴</li>
-            <li>+ сироп</li>
+            <li>Еспресо купаж +10 ₴</li>
+            <li>Еспресо арабіка +15 ₴</li>
+            <li>Сироп</li>
         </ul>
     `,
-
 
 
     raf: `
@@ -179,32 +185,20 @@ var products = {
         </ul>
     `,
 
+
     dopio: `
         <h2>Допіо</h2>
 
-        <p class="price">82 ₴</p>
-        
+        <p class="price">48 ₴</p>
+
         <h3>Кава</h3>
 
-         <ul>
+        <ul>
             <li>Кава купаж</li>
             <li>Кава Арабіка +5 ₴</li>
             <li>Кава Декаф +10 ₴</li>
         </ul>
-
     `,
-    croissant: `
-        <h2>Круасан солоний</h2>
-
-        <h3>Різновиди</h3>
-
-        <ul>
-            <li>Круасан з куркою — 160 ₴</li>
-            <li>Круасан з лососем — 175 ₴</li>
-            <li>Круасан з шинкою — 160 ₴</li>
-        </ul>
-    `,
-
 
 
     cheesecake: `
@@ -216,53 +210,122 @@ var products = {
             <li>Снікерс — 165 ₴</li>
             <li>Малиновий — 165 ₴</li>
         </ul>
+    `,
+
+
+    tiramisu: `
+        <h2>Тірамісу</h2>
+
+        <p class="price">130 ₴</p>
+
+        <h3>Склад</h3>
+
+        <ul>
+            <li>Маскарпоне</li>
+            <li>Кава</li>
+            <li>Какао</li>
+            <li>Ніжний бісквіт</li>
+        </ul>
+    `,
+
+
+    croissant: `
+        <h2>Круасан солоний</h2>
+
+        <h3>Різновиди</h3>
+
+        <ul>
+            <li>Круасан з куркою — 160 ₴</li>
+            <li>Круасан з лососем — 175 ₴</li>
+            <li>Круасан з шинкою — 160 ₴</li>
+        </ul>
     `
+
 };
 
 
 
+// =====================================
+// ВІДКРИТТЯ ТОВАРУ
+// =====================================
+
 function openProduct(product) {
+
+    if (!products[product]) {
+        return;
+    }
 
     $("#product-content").html(
         products[product]
     );
 
-    $("#product-modal").css(
-        "display",
-        "flex"
-    );
+    $("#product-modal")
+        .css("display", "flex");
+
+    $("body").css("overflow", "hidden");
 }
 
 
+
+// =====================================
+// ЗАКРИТТЯ ТОВАРУ
+// =====================================
 
 function closeProduct() {
 
     $("#product-modal").fadeOut(200);
+
+    $("body").css("overflow", "auto");
 }
 
 
 
-$("#product-modal").click(function(e){
+// =====================================
+// КЛІК ПО ТЕМНОМУ ФОНУ
+// =====================================
 
-    if(e.target === this){
+$("#product-modal").click(function(e) {
+
+    if (e.target === this) {
 
         closeProduct();
 
     }
 
 });
-$(window).scroll(function(){
 
-    if($(window).scrollTop() > 50){
+
+
+// =====================================
+// ESC — ЗАКРИТИ МОДАЛКУ
+// =====================================
+
+$(document).keydown(function(e) {
+
+    if (e.key === "Escape") {
+
+        closeProduct();
+
+    }
+
+});
+
+
+
+// =====================================
+// ТІНЬ NAVBAR ПРИ СКРОЛІ
+// =====================================
+
+$(window).scroll(function() {
+
+    if ($(window).scrollTop() > 50) {
 
         $(".navbar").css(
             "box-shadow",
             "0 8px 25px rgba(0,0,0,.15)"
         );
 
-    }
-
-    else{
+    } else {
 
         $(".navbar").css(
             "box-shadow",
@@ -270,5 +333,59 @@ $(window).scroll(function(){
         );
 
     }
+
+});
+
+
+
+// =====================================
+// АНІМАЦІЯ КАРТОК
+// =====================================
+
+function showCards() {
+
+    $(".menu-card").each(function(index) {
+
+        var card = $(this);
+
+        var cardTop = card.offset().top;
+
+        var windowBottom =
+            $(window).scrollTop() +
+            $(window).height();
+
+
+        if (
+            cardTop <
+            windowBottom - 50
+        ) {
+
+            setTimeout(function() {
+
+                card.addClass("show");
+
+            }, index * 100);
+
+        }
+
+    });
+
+}
+
+
+
+// =====================================
+// ЗАПУСК АНІМАЦІЇ
+// =====================================
+
+$(window).on(
+    "scroll",
+    showCards
+);
+
+
+$(document).ready(function() {
+
+    showCards();
 
 });

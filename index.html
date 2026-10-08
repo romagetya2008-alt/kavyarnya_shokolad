@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -17,21 +16,6 @@
 
 <body>
 
-<div id="product-modal" class="modal">
-
-    <div class="modal-box">
-
-        <button class="close-btn" onclick="closeProduct()">
-            ✕
-        </button>
-
-        <div id="product-content">
-
-        </div>
-
-    </div>
-
-</div>
 
     <!-- =========================
          НАВІГАЦІЯ
@@ -65,7 +49,7 @@
 
 
     <!-- =========================
-         ГОЛОВНИЙ БЛОК
+         HERO
     ========================== -->
 
     <header class="hero">
@@ -73,23 +57,75 @@
         <div class="hero-overlay">
 
             <p class="hero-small">
-                КАВ'ЯРНЯ «ШОКОЛАД»
+                • work • chill • coffee • place •
             </p>
 
 
             <h1>
-                Кава, десерти<br>
-                та гарний настрій
+                КАВ'ЯРНЯ «ШОКОЛАД»
             </h1>
 
 
+            <h2>
+                Затишна кав’ярня<br>
+                для посиденьок
+            </h2>
+
+
             <p class="hero-description">
-                Затишне місце для ароматної кави
-                та солодких моментів.
+
+                Кава, десерти
+                та гарний настрій.
+
             </p>
 
 
-            <a href="#kava" class="hero-button">
+            <div class="hero-info">
+
+                <div class="hero-info-item">
+
+                    <span>🕐</span>
+
+                    <div>
+
+                        <strong>ПН – НД</strong>
+
+                        <small>
+                            з 7:30 до 21:00
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-info-item">
+
+                    <span>📍</span>
+
+                    <div>
+
+                        <strong>Адреса</strong>
+
+                        <small>
+                            Вул. Соборності 17
+                        </small>
+
+                        <small>
+                            ЖК «Білий шоколад»
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#kava"
+                class="hero-button"
+            >
                 Переглянути меню ↓
             </a>
 
@@ -100,7 +136,7 @@
 
 
     <!-- =========================
-         ОСНОВНЕ МЕНЮ
+         ОСНОВНИЙ КОНТЕНТ
     ========================== -->
 
     <main>
@@ -110,21 +146,35 @@
              КАВА
         ========================== -->
 
-        <section id="kava">
+        <section
+            id="kava"
+            class="menu-section"
+        >
 
             <div class="section-heading">
 
+                <span class="section-label">
+                    НАША КАВА
+                </span>
 
-                <h2>☕ Кава</h2>
+
+                <h2>
+                    ☕ Кава
+                </h2>
+
+
+                <div class="heading-line"></div>
+
 
                 <p>
-                    Класичні напої для справжніх поціновувачів кави
+                    Ароматна кава, приготована з любов'ю
                 </p>
 
             </div>
 
 
-    <div class="menu-grid menu-shadow">
+            <div class="menu-grid menu-shadow">
+
 
                 <!-- ЕСПРЕСО -->
 
@@ -149,7 +199,10 @@
 
                     <div class="card-info">
 
-                        <h3>Еспресо</h3>
+                        <h3>
+                            Еспресо
+                        </h3>
+
 
                         <p>
                             Насичений ароматний еспресо
@@ -194,11 +247,14 @@
 
                     <div class="card-info">
 
-                        <h3>Капучино 250/400/500</h3>
+                        <h3>
+                            Капучино 250/400/500
+                        </h3>
+
 
                         <p>
-                            Еспресо з ніжною молочною
-                            пінкою.
+                            Еспресо з ніжною
+                            молочною пінкою.
                         </p>
 
 
@@ -239,7 +295,10 @@
 
                     <div class="card-info">
 
-                        <h3>Флет Вайт</h3>
+                        <h3>
+                            Флет Вайт
+                        </h3>
+
 
                         <p>
                             Подвійний еспресо
@@ -284,7 +343,10 @@
 
                     <div class="card-info">
 
-                        <h3>Латте 250/400/500</h3>
+                        <h3>
+                            Латте 250/400/500
+                        </h3>
+
 
                         <p>
                             Ніжна кава з великою
@@ -329,7 +391,10 @@
 
                     <div class="card-info">
 
-                        <h3>Американо</h3>
+                        <h3>
+                            Американо
+                        </h3>
+
 
                         <p>
                             Класична чорна кава
@@ -374,7 +439,10 @@
 
                     <div class="card-info">
 
-                        <h3>Раф</h3>
+                        <h3>
+                            Раф
+                        </h3>
+
 
                         <p>
                             Ніжний вершковий
@@ -419,7 +487,10 @@
 
                     <div class="card-info">
 
-                        <h3>Допіо</h3>
+                        <h3>
+                            Допіо
+                        </h3>
+
 
                         <p>
                             Подвійна порція
@@ -443,6 +514,7 @@
 
                 </div>
 
+
             </div>
 
         </section>
@@ -453,15 +525,28 @@
              ДЕСЕРТИ
         ========================== -->
 
-        <section id="deserty">
+        <section
+            id="deserty"
+            class="menu-section"
+        >
 
             <div class="section-heading">
 
+                <span class="section-label">
+                    СОЛОДКІ МОМЕНТИ
+                </span>
 
-                <h2>🍰 Десерти</h2>
+
+                <h2>
+                    🍰 Десерти
+                </h2>
+
+
+                <div class="heading-line"></div>
+
 
                 <p>
-                    Ідеальне доповнення до твоєї кави
+                    Щось смачне до твоєї улюбленої кави
                 </p>
 
             </div>
@@ -489,7 +574,10 @@
 
                     <div class="card-info">
 
-                        <h3>Чізкейк</h3>
+                        <h3>
+                            Чізкейк
+                        </h3>
+
 
                         <p>
                             Ніжний вершковий десерт
@@ -534,7 +622,10 @@
 
                     <div class="card-info">
 
-                        <h3>Тірамісу</h3>
+                        <h3>
+                            Тірамісу
+                        </h3>
+
 
                         <p>
                             Класичний італійський
@@ -579,7 +670,10 @@
 
                     <div class="card-info">
 
-                        <h3>Круасан</h3>
+                        <h3>
+                            Круасан
+                        </h3>
+
 
                         <p>
                             Хрусткий французький
@@ -590,7 +684,7 @@
                         <div class="card-footer">
 
                             <strong>
-                                160 грн
+                                від 160 грн
                             </strong>
 
                             <span class="more">
@@ -603,6 +697,7 @@
 
                 </div>
 
+
             </div>
 
         </section>
@@ -613,7 +708,10 @@
              КОНТАКТИ
         ========================== -->
 
-        <section id="contacts" class="contacts">
+        <section
+            id="contacts"
+            class="contacts"
+        >
 
             <div>
 
@@ -621,9 +719,11 @@
                     ЧЕКАЄМО НА ТЕБЕ
                 </span>
 
+
                 <h2>
                     Заходь на каву ☕
                 </h2>
+
 
                 <p>
                     Гарна кава, смачні десерти
@@ -654,6 +754,7 @@
 
         </section>
 
+
     </main>
 
 
@@ -663,156 +764,21 @@
     ========================== -->
 
     <div
-        class="modal"
         id="product-modal"
+        class="modal"
     >
 
         <div class="modal-box">
 
-
             <button
-                class="close-button"
+                class="close-btn"
                 onclick="closeProduct()"
             >
-                ×
+                ✕
             </button>
 
 
-            <div class="modal-icon">
-                ☕
-            </div>
-
-
-            <h2 id="modal-title">
-                Назва
-            </h2>
-
-
-            <p
-                id="modal-description"
-                class="modal-description"
-            >
-                Опис
-            </p>
-
-
-            <div class="modal-price">
-
-                <span>
-                    Ціна
-                </span>
-
-                <strong>
-                    <span id="modal-price">
-                        0
-                    </span>
-                    грн
-                </strong>
-
-            </div>
-
-
-            <!-- Добавки -->
-
-            <div class="extras">
-
-                <h3>
-                    Добавки
-                </h3>
-
-
-                <label class="extra-option">
-
-                    <span>
-                        Додатковий сироп
-                    </span>
-
-                    <strong>
-                        +15 грн
-                    </strong>
-
-                    <input
-                        type="checkbox"
-                        class="extra"
-                        value="15"
-                    >
-
-                </label>
-
-
-                <label class="extra-option">
-
-                    <span>
-                        Додаткове молоко
-                    </span>
-
-                    <strong>
-                        +20 грн
-                    </strong>
-
-                    <input
-                        type="checkbox"
-                        class="extra"
-                        value="20"
-                    >
-
-                </label>
-
-
-                <label class="extra-option">
-
-                    <span>
-                        Шоколад
-                    </span>
-
-                    <strong>
-                        +15 грн
-                    </strong>
-
-                    <input
-                        type="checkbox"
-                        class="extra"
-                        value="15"
-                    >
-
-                </label>
-
-
-                <label class="extra-option">
-
-                    <span>
-                        Вершки
-                    </span>
-
-                    <strong>
-                        +20 грн
-                    </strong>
-
-                    <input
-                        type="checkbox"
-                        class="extra"
-                        value="20"
-                    >
-
-                </label>
-
-            </div>
-
-
-            <div class="total-price">
-
-                <span>
-                    Разом
-                </span>
-
-                <strong>
-                    <span id="total-price">
-                        0
-                    </span>
-                    грн
-                </strong>
-
-            </div>
+            <div id="product-content"></div>
 
         </div>
 
@@ -830,9 +796,11 @@
             ШОКОЛАД
         </h3>
 
+
         <p>
             Кава • Десерти • Гарний настрій
         </p>
+
 
         <small>
             © 2026 Кав'ярня «Шоколад»
@@ -842,11 +810,15 @@
 
 
 
+    <!-- jQuery -->
+
     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
+    <!-- Наш JavaScript -->
+
     <script src="script.js"></script>
+
 
 </body>
 
 </html>
-
