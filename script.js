@@ -9,7 +9,7 @@ var products = {
 
         name: "Еспресо",
 
-        price: 60,
+        price: 40,
 
         description:
             "Насичений ароматний еспресо з виразним смаком."
@@ -21,7 +21,7 @@ var products = {
 
         name: "Капучино",
 
-        price: 80,
+        price: 62,
 
         description:
             "Еспресо з ніжною молочною пінкою."
@@ -33,7 +33,7 @@ var products = {
 
         name: "Флет Вайт",
 
-        price: 85,
+        price: 78,
 
         description:
             "Подвійний еспресо з ніжним молоком."
@@ -45,7 +45,7 @@ var products = {
 
         name: "Латте",
 
-        price: 85,
+        price: 62,
 
         description:
             "Ніжна кава з великою кількістю молока."
@@ -57,7 +57,7 @@ var products = {
 
         name: "Американо",
 
-        price: 65,
+        price: 42,
 
         description:
             "Класична чорна кава з насиченим ароматом."
@@ -69,7 +69,7 @@ var products = {
 
         name: "Раф",
 
-        price: 95,
+        price: 82,
 
         description:
             "Ніжний вершковий кавовий напій."
@@ -81,7 +81,7 @@ var products = {
 
         name: "Допіо",
 
-        price: 75,
+        price: 48,
 
         description:
             "Подвійна порція насиченого еспресо."
@@ -93,7 +93,7 @@ var products = {
 
         name: "Чізкейк",
 
-        price: 120,
+        price: 165,
 
         description:
             "Ніжний вершковий десерт з легкою текстурою."
@@ -117,7 +117,7 @@ var products = {
 
         name: "Круасан",
 
-        price: 90,
+        price: 160,
 
         description:
             "Хрусткий французький круасан."
