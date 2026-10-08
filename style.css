@@ -157,7 +157,7 @@ body {
             rgba(40, 25, 17, 0.58)
         ),
 
-        url("images/coffee1.jpeg");
+        url("images/previu.jpg");
 
     background-size: cover;
 
@@ -1011,4 +1011,255 @@ footer small {
 
     }
 
+}
+/* Модальне вікно */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.7);
+
+    z-index: 9999;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.modal-box {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    position: relative;
+}
+
+.close-btn {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+#product-content h2 {
+
+    margin-top: 0;
+
+    color: #6f4e37;
+}
+
+#product-content .price {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #6f4e37;
+}
+
+#product-content h3 {
+
+    margin-top: 25px;
+
+    color: #6f4e37;
+}
+
+#product-content ul {
+
+    padding-left: 20px;
+}
+
+#product-content li {
+
+    margin: 8px 0;
+}
+/* ===========================
+   ОДНАКОВА ВИСОТА КАРТОК
+=========================== */
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+
+/* ===========================
+   ПЛАВНА ПОЯВА САЙТУ
+=========================== */
+
+body {
+    animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* ===========================
+   КРАЩІ ЦІНИ
+=========================== */
+
+.card-footer strong {
+
+    font-size: 24px;
+
+    color: #8b5e3c;
+}
+
+
+/* ===========================
+   КРАЩЕ ВІКНО ТОВАРУ
+=========================== */
+
+#product-content ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+#product-content li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+#product-content li:last-child {
+
+    border-bottom: none;
+}
+
+
+/* ===========================
+   КРАЩИЙ СКРОЛБАР
+=========================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #8b5e3c;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background: #f2ebe5;
+}
+
+/* ===========================
+   СТАТИСТИКА
+=========================== */
+
+.stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 50px 20px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.stats h3 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+    color: #8b5e3c;
+}
+
+.stats p {
+
+    margin-top: 10px;
+
+    color: #777;
+}
+
+@media (max-width: 700px){
+
+    .stats{
+
+        flex-direction: column;
+
+        gap: 30px;
+
+    }
+
+}
+.menu-shadow {
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,.06);
 }
